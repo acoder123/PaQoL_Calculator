@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Pa-Qol Score</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <h1 class="title">Pa-Qol Score Calculator</h1>
+
+<h3 id="warning"> Disclaimer: Please Confirm Data Availability. </h3>
+  <form id="form">
+    
+    <div class="field">
+      <h3>Exercise Days Per Week</h3>|<span><label for = "E_days">Available: </label> <input id = "E_days" type = "checkbox">  </input> </span>
+  
+      
+      <input
+        type="range"
+        name="Exercise"
+        id="Exercise"
+        min="0"
+        max="7"
+        step="1"
+        value="0"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>0</output>
+    </div>
+
+    <div class="field">
+      <h3>Exercise Minutes Per Week </h3>|<span><label for = "E_minutes">Available: </label> <input id = "E_minutes" type = "checkbox"> </span>
+      <select id="minutes" name = "minutes">
+        <option value="1-15">1–15 min</option>
+        <option value="16-30">16–30 min</option>
+        <option value="31-59">31–59 min</option>
+        <option value="60-89">60–89 min</option>
+        <option value="90-119">90–119 min</option>
+        <option value="120-149">120–149 min</option>
+        <option value="150+">150+</option>
+        <option value="180+">180+</option>
+      </select>
+    </div>
+
+    <div class="field checkbox">
+      <input type="checkbox" id="Event" name ="Event"/>
+      <label style = "margin-bottom: 0px !important;" for="Event"> Training for an Event?</label>|<span><label for = "Et_boolean" style = "margin-bottom: 0px !important;"> Available:  </label>
+        <input id = "Et_boolean" value = "Et_boolean"type = "checkbox"> </span>
+    </div>
+     <div class="field checkbox">
+      <input type="checkbox" id="Min_boolean" name ="Min_boolean"/>
+      <label style = "margin-bottom: 0px !important;" for="Min_boolean"> 150+ Minutes of Activity?</label>|<span><label for = "min_boolean" style = "margin-bottom: 0px !important;"> Available:  </label><input id = "min_boolean" value = "min_boolean"type = "checkbox"> </span>
+    </div>
+
+    <div class="field">
+      <label for="Slept">Hours Slept Per Day </label> | <span> <label for= "S_hours"> Available: <input id = "S_hours" type = "checkbox"></span>
+      <input
+        name="number"
+        type="number"
+        value = "sleep"
+        id="sleep"
+        min="0"
+        max="24"
+        placeholder="0"
+      />
+    </div>
+
+    <div class="field">
+      <h3>Rested Days Per Week</h3> | <span> <label for= "R_days"> Available: <input id = "R_days" type = "checkbox"></span>
+      <input
+        name="Rested"
+        type="range"
+        id="rested"
+        min="0"
+        max="7"
+        step="1"
+        value="0"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>0</output>
+    </div>
+
+    <div class="field">
+      <label for="Fruits"> Fruit / Vegetable Servings Per Day</label> | <span> <label for = "F_servings"> Available: </label> <input id = "F_servings" type = "checkbox" ></span>
+      <input
+        value = "fruits"
+        name="Fruits"
+        type="number"
+        id="fruits"
+        min="0"
+        max="30"
+        placeholder="0"
+      />
+    </div>
+
+    <div class="field">
+      <h3>Mindfulness Days Per Week</h3> | <span> <label for = "M_days"> Available: </label> <input id = "M_days" type = "checkbox"> </span>
+      <input
+        name = "mindfulness"
+        type="range"
+        id="mindfulness"
+        min="0"
+        max="7"
+        step="1"
+        value="0"
+        oninput="this.nextElementSibling.value = this.value"
+      />
+      <output>0</output>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+  <div class="field">
+    <h3> Your PaQoL Score Is: </h3> 
+    <h3 id="Score"></h3>
+     <h4> Your Z-Comp Score Is: </h4> 
+    <h4 id= "Z_Comp"></h4>
+
+  </div>
+<footer> <a href= "/Users/adamanouti/Desktop/PaQol_Project/webpage.html">Supplement</a> </footer>
+
+  <script src="PaQol.js"></script>
+</body>
+</html>
